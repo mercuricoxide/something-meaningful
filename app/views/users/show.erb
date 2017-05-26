@@ -1,0 +1,10 @@
+<h1> Welcome, <%= @user.username.upcase %></h1>
+
+<h2>Your Saved Messages:</h2>
+<ul>
+  <% @user.messages.each do |message| %>
+    <li><%= user.message %></li>
+  <% end %>
+</ul>
+
+<a href="/messages">+ Create a New Message</a>

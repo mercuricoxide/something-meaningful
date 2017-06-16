@@ -4,39 +4,39 @@ $(document).ready(function() {
 
   var pacman = {};
 
-  pacman.r = 20;
-  pacman.d = 5;
-  pacman.l = 20
-  pacman.u = 5
+  pacman.rightCoord = 105;
+  pacman.downCoord = 267;
+  pacman.leftCoord = 105;
+  pacman.upCoord = 267;
 
 
   function handleTyping(event) {
 
-    pacman.r += 10
-    pacman.d += 10
-    pacman.l -= 10
-    pacman.u -= 10
+    pacman.rightCoord += 5
+    pacman.downCoord -= 5
+    pacman.leftCoord -= 5
+    pacman.upCoord += 5
 
     switch(event.which) {
       case 39:
         $("#pacman").css({
-          "left": pacman.r + "px"
+          "left": pacman.rightCoord + "px"
         });
         break;
       case 40:
-      $("#pacman").css({
-        "top": pacman.d + "px"
-      });
+        $("#pacman").css({
+          "bottom": pacman.downCoord + "px"
+        });
         break;
       case 37:
-      $("#pacman").css({
-        "left": pacman.l + "px"
-      });
+        $("#pacman").css({
+        "left": pacman.leftCoord + "px"
+        });
         break;
       case 38:
-      $("#pacman").css({
-        "top": pacman.u + "px"
-      });
+        $("#pacman").css({
+        "bottom": pacman.upCoord + "px"
+        });
         break;
       };
 
@@ -45,4 +45,5 @@ $(document).ready(function() {
 
 });
 
+// Keys: Right: 39, Down: 40, Left: 37, Up: 38
 // trbl = 38 39 40 37

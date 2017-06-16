@@ -1,0 +1,20 @@
+.board {
+  background-color: black;
+  border: 2px solid blue;
+  height: 400px;
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+#pacman {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 20px;
+  top: 5px;
+}
+
+#title {
+ text-align: center;
+}
